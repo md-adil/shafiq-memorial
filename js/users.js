@@ -1,5 +1,5 @@
 (function() {
-    var container = $('#data-rows').empty();
+    var container = $('#data-rows');
     var authorizationToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI1ZTUxMWYxZGJiOWFlMzQ5YTE3ZjE5ZTIiLCJpYXQiOjE1ODIzNzQ2ODU3MjF9.NnMqOSf-uLerrDqCsKHmSYoI1sv7dNpbZ3tHYzW98jo";
 
     function fetchUsers() {
@@ -43,7 +43,7 @@
 
     fetchUsers().then(function(users) {
         $.each(users.docs, function() {
-            container.prepend(
+            container.append(
                 createElement(this)
             )
         })
