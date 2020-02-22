@@ -22,7 +22,7 @@
             <div class="single_courses">
                 <div class="thumb">
                     <a href="${user.data.profile}" target="adil">
-                        <img src="${user.avatar}" style="height: 250px;object-fit:cover;" alt="" />
+                        <img src="${user.avatar}" style="height: 250px;object-fit:cover;object-position:top" alt="" />
                     </a>
                 </div>
                 <div class="courses_info">
@@ -43,7 +43,7 @@
 
     fetchUsers().then(function(users) {
         $.each(users.docs, function() {
-            container.append(
+            container.prepend(
                 createElement(this)
             )
         })
